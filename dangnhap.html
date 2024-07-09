@@ -4,110 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    h2 {
-        text-align: center;
-        color: #333;
-    }
-
-  
-    .login {
-        max-width: 400px;
-        margin: 0 auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-
-
-    .login_center_top {
-        text-align: center;
-    }
-
-   
-    .login_center_topText {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-    .login_cente_bottom {
-        margin-top: 20px;
-    }
-
-  
-    .login_cente_bottom--nameText {
-        font-weight: bold;
-    }
-
-
-    .login_cente_bottom--NameInput {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    .login_cente_bottom--NameInputR {
-    
-    }
-
- 
-    .login_cente_bottom--btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
- 
-    .login_center_topTextPhpErorr {
-        color: red;
-    }
-
-
-
-</style>
-
-
-   
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chung.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 <body>
      
-    <div class="login">
-        <form class="login_center login_center_dangnhap displayNone" method="post" action="index.php?act=dangnhapadmin">
-            <div class="login_center_top">
-                <div class="login_center_topText">Đăng nhập Admin</div>
-            </div>
+   
+<div class="login">
+    <form class="login_center login_center_dangnhap displayNone" method="post" action="index.php?act=dangnhap">
+        <div class="login_center_top">
+            <div class="login_center_topText">Đăng nhập</div>
+            <a href="index.php" class="login_close">
+                <i class="fa-solid fa-xmark login_center_topIcon"></i>
+            </a>
 
-            <div class="login_cente_bottom">
-                <div class="login_cente_bottomList">
-                    <div class="login_cente_bottom--name">
-                        <div class="login_cente_bottom--nameText">Tên tài khoản</div>
-                        <input type="text" text="" class="login_cente_bottom--NameInput login_cente_bottom--NameInputR" placeholder="Tên tài khoản" name="tentaikhoan">
-                    </div>
-                    <div class="login_cente_bottom--name">
-                        <div class="login_cente_bottom--nameText">Mật khẩu</div>
-                        <input type="password" text="" class="login_cente_bottom--NameInput" placeholder="Mật khẩu" name="matkhau">
-                    </div>
+        </div>
+
+        <div class="login_cente_bottom">
+            <div class="login_cente_bottomList">
+                <div class="login_cente_bottom--name">
+                    <div class="login_cente_bottom--nameText">Tên tài khoản</div>
+                    <input type="text" text="" class="login_cente_bottom--NameInput login_cente_bottom--NameInputR" placeholder="Tên tài khoản" name="tentaikhoan">
                 </div>
-                <input class="login_cente_bottom--btn" type="submit" name="dangnhap" value="Đăng nhập">
-                <?php
-                // Kiểm tra tham số thongbao trong URL
-                if (isset($_GET['thongbao']) && $_GET['thongbao'] == 1) {
-                    echo '<div class="login_center_topTextPhpErorr">Tên đăng nhập hoặc mật khẩu không đúng</div>';
-                }
-                ?>
+                <div class="login_cente_bottom--name">
+                    <div class="login_cente_bottom--nameText">Mật khẩu</div>
+                    <input type="password" text="" class="login_cente_bottom--NameInput" placeholder="Mật khẩu" name="matkhau">
+                </div>
             </div>
-        </form>
-    </div>
-</body>s
+            <div class="login_cente_bottom--notpass"><a href="index.php?act=quenmatkhau">Quên mật khẩu?</a></div>
+            <input class="login_cente_bottom--btn" type="submit" name="dangnhap" value="Đăng nhập">
+            <div class="login_cente_bottom--text">
+                <span>Chưa có tài khoản?</span>
+                <span><a href="index.php?act=dangky">Đăng ký</a></span>
+            </div>
+            <!-- <?php if (isset($thongbao) && ($thongbao != "")) {
+                echo '<div class="login_center_topTextPhpErorr">' . $thongbao . '</div>';
+            } ?> -->
+        </div>
+    </form>
+</div>
+</body>
 </html>
-<style>
+
 
     
